@@ -2,7 +2,7 @@
 lua configuration for nvim.
 
 ## TODO:
-- [x] Fix error code: **NVIM VERSION WAS TO OLD NEEDED V8.3**
+- [x] Fix error code: **SOLVED: NVIM VERSION WAS TO OLD NEEDED V8.3**
 ```
 Error detected while processing FileType Autocommands for "*":
 Error executing lua callback: .../start/nvim-treesitter/lua/nvim-treesitter/highlight.lua:19: attempt to call field 'start' (a nil value)
