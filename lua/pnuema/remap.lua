@@ -16,9 +16,13 @@ vim.keymap.set("n", "<F8>", [[:TagbarToggle<CR>]], {noremap = true})
 
 vim.keymap.set('n', '<leader>pv', [[:Ex<CR>]], {noremap = true})
 
--- copy and paste
-vim.keymap.set('v', '<C-c>', [[ "+y]], {noremap = true})
-vim.keymap.set('v', '<C-v>', [[ "+p]], {noremap = true})
+-- Set the clipboard to use the system clipboard
+vim.o.clipboard = "unnamedplus"
+
+-- Map the copy and paste commands to use the system clipboard
+vim.api.nvim_set_keymap("v", "<C-c>", [["+y]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-x>", [["+d]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-v>", [["+p]], { noremap = true, silent = true })
 
 -- Set terminal to right after hitting C
 vim.api.nvim_set_keymap("n", "<C-t>", [[:vsplit term://bash<CR>]], {silent = true})

@@ -4,11 +4,14 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+
 return require('packer').startup(function(use)
   -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
-    -- telecope fussy finder 
+    
+    use {'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lua', } }
+    
+  -- telecope fussy finder 
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
@@ -17,13 +20,14 @@ return require('packer').startup(function(use)
 
 -- Old plugins ----------------------------------------------------------------
 
+  
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use ('https://github.com/vim-airline/vim-airline')
     use ('https://github.com/vim-airline/vim-airline-themes')
     use ('https://github.com/tpope/vim-commentary') -- For Commenting gcc & gc
     use ('https://github.com/rafi/awesome-vim-colorschemes')
     use ('https://github.com/preservim/nerdtree')
-    use ('https://github.com/preservim/tagbar')
+    use ('https://github.com/preservim/tagbar') 
     use ('https://github.com/ryanoasis/vim-devicons')
     use ('https://github.com/ap/vim-css-color')
     use ('http://github.com/tpope/vim-surround') -- Surrounding ysw
@@ -33,48 +37,51 @@ return require('packer').startup(function(use)
     use ('nvim-tree/nvim-web-devicons')
     use ('nvim-lua/plenary.nvim')
     use ('theprimeagen/harpoon')
+
 --ColorSchemes-----------------------------------------------------------------
 
-    --use({
-        --'rose-pine/neovim',
-        --as = 'rose-pine',
-        --config = function()
-       --     vim.cmd('colorscheme rose-pine')
-     --   end
-   -- })   
-   -- use({
-    --  'projekt0n/github-nvim-theme',
-    --  config = function()
-       -- require('github-theme').setup({
-          -- ...
-       -- })
-     -- end
-   -- }
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })   
+    
+--    use({
+--      'projekt0n/github-nvim-theme',
+--      config = function()
+--        require('github-theme').setup({
+--           ...
+--        })
+--      end
+--    }
 
    -- guvbox 
-    use({
-      'ellisonleao/gruvbox.nvim',
-      config = function()
-        require("gruvbox").setup({
-          undercurl = true,
-          underline = true,
-          bold = true,
-          italic = true,
-          strikethrough = true,
-          invert_selection = false,
-          invert_signs = false,
-          invert_tabline = false,
-          invert_intend_guides = false,
-          inverse = true, -- invert background for search, diffs, statuslines and errors
-          contrast = "", -- can be "hard", "soft" or empty string
-          palette_overrides = {},
-          overrides = {},
-          dim_inactive = false,
-          transparent_mode = false,
-        })
-        vim.cmd("colorscheme gruvbox")
-      end
-    })
+--    use({
+--      'ellisonleao/gruvbox.nvim',
+--      config = function()
+--        require("gruvbox").setup({
+--          undercurl = true,
+--          underline = true,
+--          bold = true,
+--          italic = true,
+--          strikethrough = true,
+--          invert_selection = false,
+--          invert_signs = false,
+--          invert_tabline = false,
+--          invert_intend_guides = false,
+--          inverse = true, -- invert background for search, diffs, statuslines and errors
+--          contrast = "", -- can be "hard", "soft" or empty string
+--          palette_overrides = {},
+--          overrides = {},
+--          dim_inactive = false,
+--          transparent_mode = false,
+--        })
+--        vim.cmd("colorscheme gruvbox")
+--      end
+--    })
+
 --LSP ---------------------------------------------------------------------------
     use {
       'VonHeikemen/lsp-zero.nvim',

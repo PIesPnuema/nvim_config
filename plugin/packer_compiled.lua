@@ -114,12 +114,6 @@ _G.packer_plugins = {
     path = "/home/pnuema1.618/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox.nvim"] = {
-    config = { "\27LJ\2\2À\2\0\0\3\0\t\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0004\2\0\0=\2\4\0014\2\0\0=\2\5\1B\0\2\0016\0\6\0009\0\a\0'\1\b\0B\0\2\1K\0\1\0\24colorscheme gruvbox\bcmd\bvim\14overrides\22palette_overrides\1\0\r\17invert_signs\1\14underline\2\17dim_inactive\1\tbold\2\19invert_tabline\1\21transparent_mode\1\finverse\2\18strikethrough\2\21invert_selection\1\rcontrast\5\25invert_intend_guides\1\14undercurl\2\vitalic\2\nsetup\fgruvbox\frequire\0" },
-    loaded = true,
-    path = "/home/pnuema1.618/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/pnuema1.618/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -180,6 +174,12 @@ _G.packer_plugins = {
     path = "/home/pnuema1.618/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/pnuema1.618/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   tagbar = {
     loaded = true,
     path = "/home/pnuema1.618/.local/share/nvim/site/pack/packer/start/tagbar",
@@ -233,10 +233,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gruvbox.nvim
-time([[Config for gruvbox.nvim]], true)
-try_loadstring("\27LJ\2\2À\2\0\0\3\0\t\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0004\2\0\0=\2\4\0014\2\0\0=\2\5\1B\0\2\0016\0\6\0009\0\a\0'\1\b\0B\0\2\1K\0\1\0\24colorscheme gruvbox\bcmd\bvim\14overrides\22palette_overrides\1\0\r\17invert_signs\1\14underline\2\17dim_inactive\1\tbold\2\19invert_tabline\1\21transparent_mode\1\finverse\2\18strikethrough\2\21invert_selection\1\rcontrast\5\25invert_intend_guides\1\14undercurl\2\vitalic\2\nsetup\fgruvbox\frequire\0", "config", "gruvbox.nvim")
-time([[Config for gruvbox.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
